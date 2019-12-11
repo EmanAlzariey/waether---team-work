@@ -1,17 +1,34 @@
 import React from 'react'
 
 function chImg(){
-    if(this.props.temp>=33){
-        <img src="../images/summer.jpg"/> 
+    if(parseInt(this.props.t)>=33){
+        return(
+        
+            
+            <img src="../images/summer.jpg"/> 
+            ) 
     }
-    else if((this.props.temp<33)&&(this.props.temp>=25)){
-        <img src="../images/spring.jpg"/> 
+    else if((parseInt(this.props.t)<33)&&(parseInt(this.props.t)>=25)){  
+        return(
+        
+            
+            <img src="../images/summer.jpg"/> 
+            ) 
     }
-    else if((this.props.temp<25)&&(this.props.temp>=10)){
-        <img src="../images/autumn.jpg"/> 
+    else if((parseInt(this.props.t)<25)&&(parseInt(this.props.t)>=10)){
+        return(
+        
+            
+            <img src="../images/summer.jpg"/> 
+            ) 
     }
-    else if(this.props.temp<10){
-        <img src="../images/winter.jpg"/> 
+    else if(parseInt(this.props.t)<10){
+        
+        return(
+        
+            
+          <img src="../images/summer.jpg"/> 
+          ) 
     }
            
 }
@@ -19,11 +36,9 @@ function chImg(){
 export default class PicComp extends React.Component{
     render(){
         return(
-        
-        <div>
-        {
-            chImg()
-        }
-        </div>)
+            <div>{
+        chImg()}
+        </div>
+        )
     }
 }
