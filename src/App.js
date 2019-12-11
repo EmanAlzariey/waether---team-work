@@ -20,18 +20,18 @@ class App extends Component {
       city:e.target.name
     })
     
-    fetch(`http://api.weatherstack.com/current?access_key=e49621cf55fd2461357f46f8cc5431e1&query=${this.state.city}`)
+    fetch(`http://api.weatherstack.com/current?access_key=e49621cf55fd2461357f46f8cc5431e1&query=sanaa`)
       .then(response => response.json())
-      .then(json => console.log(json));
+      .then(json => this.state.dataArr[json]);
   }
 
 
   render() {
     return (
       <div>
-        <PicComp />
+        
         <ButtonComp fetchBtn={this.fetchBtn}/>
-        <PicComp temp={json.current.temperature}/>
+        <PicComp temp={this.state.dataArr.current.temperature}/>
       </div>
     );
   
