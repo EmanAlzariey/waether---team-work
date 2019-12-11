@@ -10,7 +10,7 @@ export class App extends Component {
     super();
 
     state={
-      city:"sanaa"
+      city:""
     }
   }
 
@@ -27,7 +27,7 @@ export class App extends Component {
   render() {
     return (
       <div>
-        
+        <ButtonComp fetchBtn={this.fetchBtn}/>
       </div>
     );
   }
