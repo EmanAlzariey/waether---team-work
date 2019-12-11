@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import ButtonComp from './ButtonComp'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import PicComp from './PicComp';
 
 
 class App extends Component {
@@ -13,7 +14,8 @@ class App extends Component {
       sanaa:'',
       aden:'',
       baghdad:'',
-      cairo:''
+      cairo:'',
+      temp:''
     }
   }
 
@@ -34,16 +36,19 @@ class App extends Component {
 
   fetchsanaa=(e)=>{
    console.log(this.state.sanaa)
-   console.log(this.state.sanaa.current.temperature)
+   this.setState({temp:this.state.sanaa.current.temperature})
   }
   fetchaden=(e)=>{
    console.log(this.state.aden)
+   this.setState({temp:this.state.aden.current.temperature})
   }
   fetchbagh=(e)=>{
    console.log(this.state.baghdad)
+   this.setState({temp:this.state.baghdad.current.temperature})
   }
   fetchcar=(e)=>{
    console.log(this.state.cairo)
+   this.setState({temp:this.state.cairo.current.temperature})
   }
 
 
@@ -51,6 +56,7 @@ class App extends Component {
     return (
       <div>
         <ButtonComp fetchsanaa={this.fetchsanaa} fetchaden={this.fetchaden} fetchbagh={this.fetchbagh} fetchcar={this.fetchcar} />
+        <PicComp t={this.state.temp}/>
         
       </div>
     );
