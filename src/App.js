@@ -28,6 +28,7 @@ export class App extends Component {
     return (
       <div>
         <ButtonComp fetchBtn={this.fetchBtn}/>
+        <PicComp temp={json.current.temperature}/>
       </div>
     );
   
