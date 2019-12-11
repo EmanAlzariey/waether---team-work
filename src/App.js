@@ -9,20 +9,20 @@ export class App extends Component {
   constructor(){
     super();
 
-    state={
-      city:""
+    this.state={
+      city:"",
+      dataArr:[]
     }
   }
 
-  fetchBtn=()=>{
+  fetchBtn=(e)=>{
     this.setState({
       city:e.target.name
     })
-
     
     fetch(`http://api.weatherstack.com/current?access_key=e49621cf55fd2461357f46f8cc5431e1&query=${this.state.city}`)
       .then(response => response.json())
-      .then(data => this.setState({ dataArr: data }));
+      .then(json => console.log(json));
   }
   render() {
     return (
@@ -30,6 +30,7 @@ export class App extends Component {
         <ButtonComp fetchBtn={this.fetchBtn}/>
       </div>
     );
+  
   }
 }
 
