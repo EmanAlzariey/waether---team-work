@@ -18,7 +18,10 @@ function chImg(){
 
 export default class PicComp extends React.Component{
     render(){
-        return(<div>{
+        return(
+        
+        <div>
+        {
             chImg()
         }
         </div>)
