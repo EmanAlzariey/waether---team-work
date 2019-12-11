@@ -10,10 +10,10 @@ class App extends Component {
 
     this.state={
       city:"",
-      sanaa:[],
-      aden:[],
-      baghdad:[],
-      cairo:[]
+      sanaa:'',
+      aden:'',
+      baghdad:'',
+      cairo:''
     }
   }
 
@@ -34,6 +34,7 @@ class App extends Component {
 
   fetchsanaa=(e)=>{
    console.log(this.state.sanaa)
+   console.log(this.state.sanaa.current.temperature)
   }
   fetchaden=(e)=>{
    console.log(this.state.aden)
