@@ -27,7 +27,7 @@ body, html {
   scroll-behavior: smooth;
 }
 
-.container {
+#container {
   /* background-image: url("https://www.musiciansoncall.org/wp-content/uploads/2017/12/music-pharmacy-background.jpg"); */
   background-repeat: no-repeat;
   /* color: #F8B; */
@@ -259,7 +259,7 @@ header{
   display: inline-block;
 }
 
-}*/
+
 [class*="col-"] {
     /* height: 200px; */
     width: 100%;
